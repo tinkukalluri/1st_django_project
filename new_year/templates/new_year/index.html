@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <html>
+        <head>
+            <title>isitnewyear</title>
+            <link rel="stylesheet" href="{% static 'newyear/style.css' %}">
+        </head>
+        <body>
+           
+            <h1 style="color:indianred;"> is it new year?</h1>
+            {% if newyear %}
+                <h3 style="color: rgb(69, 69, 231);">yes it is!</h3>
+                <h2> lets go.....</h2>
+            {% else %}
+                <h3 style="color:red">no</h3>
+                <h2>no no....</h2>
+            {%endif%}
+
+        </body>
+    </html>

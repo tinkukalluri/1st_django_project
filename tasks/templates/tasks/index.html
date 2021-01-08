@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<html>
+   
+     <head>
+         <title>tasks_index</title>
+         <link rel="stylesheet" href="{% static 'tasks/index.css' %}">
+         <a href="http://127.0.0.1:8000/tasks/add">click hear</a>
+     </head>
+     <body>
+         <!-- <h2>in the list index</h2> -->
+         <h2>{{tasks}}</h2>
+         <h2>{{re}}</h2>
+         <ul>
+         {% for x in tasks %}
+         <li>{{x}}</li>
+         {% empty %}
+            <li>no tasks</li>
+         {% endfor %}
+         </ul>
+         <a href="http://127.0.0.1:8000/tasks/add">click hear</a>
+         <a href="{% url 'tasks:add' %}">adds</a>
+     </body>
+
+</html>
